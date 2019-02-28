@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import Person from './Person/Person.js';
+import Person from './components/Persons/Person/Person.js';
 
 
 
@@ -66,7 +66,6 @@ render(){
   let displayContent = null;
   if (this.state.display){
     displayContent = (
-      <StyleRoot>
         <div>
         {this.state.persons.map((person, index) => {
           return <Person name={person.name} 
@@ -77,7 +76,6 @@ render(){
                         />
         })}
         </div>
-      </StyleRoot>
       
     );
     style.backgroundColor = 'red';
